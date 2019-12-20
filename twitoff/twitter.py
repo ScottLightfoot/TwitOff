@@ -21,8 +21,7 @@ def add_or_update_user(username):
         # Add user info to User table in db
         db_user = User(id=twitter_user.id,
                        username=twitter_user.screen_name,
-                       followers=twitter_user.followers_count,
-                       newest_tweet_id=newest_tweet_id)
+                       followers=twitter_user.followers_count)
         DB.session.add(db_user)
 
         # Add as many recent non-retweet/reply tweets as possible
