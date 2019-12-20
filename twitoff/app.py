@@ -60,7 +60,7 @@ def create_app():
     def reset():
         DB.drop_all()
         DB.create_all()
-        return render_template('base.html', title = 'Panic Button!', users=[])
+        return render_template('base.html', title = 'Compare Users!', users=[])
     
     @app.route('/add_default')
     def add_default():
